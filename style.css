@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color:hsl(233, 47%, 7%);
+}
+h1{
+    color: hsl(0, 0%, 100%);
+    font-size: 3.2rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.3;
+    letter-spacing: 1px;
+
+}
+.container{
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: 1fr 1fr;
+    width: 85vw;
+   
+    margin: 20rem auto;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container-img{
+    background-image: linear-gradient( to right, hsla(277, 64%, 61%, 0.6), hsla(277, 64%, 61%, 0.6)), url(./images/image-header-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    /* object-fit:cover; */
+   grid-column: 2/3;
+   z-index: 1 ;
+    
+}
+.container-content{
+    grid-column: 1/2;
+}
+.container-inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 8rem ;
+
+  
+}
+
+.container-inner-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+.content-text{
+    font-size: 1.5rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 4rem;
+    line-height: 1.3;
+    font-family: 'Lexend Deca', sans-serif; 
+    
+}
+.stat-heading{
+    color:  hsla(0, 0%, 100%, 0.6);
+    font-size: 3.2rem;
+    font-family: 'Inter', sans-serif
+}
+.stat{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif; 
+}
+.insights{
+    color:  hsl(277, 64%, 61%);
+}
+
+@media (max-width: 1000px){
+    
+html{
+    font-size: 55.5%;
+}
+.container-inner{
+    padding: 4rem;
+}
+.container-inner-bottom{
+    justify-content: space-around;
+}
+}
+@media (min-width:601px) and (max-width: 850px){
+    
+    html{
+        font-size: 51.5%;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: 1fr  1fr;
+        grid-template-columns: 1fr;
+        margin: 10rem auto;
+        
+    }
+    
+    .container-img{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        height: 50vh;
+        background-image: linear-gradient( to right, hsla(277, 64%, 61%, 0.6), hsla(277, 64%, 61%, 0.6)), url(./images/image-header-mobile.jpg);
+       
+    }
+    .container-content{
+        grid-row: 2/3;
+    }
+    .container-inner{
+        padding: 1rem;
+    }
+   
+
+ 
+}
+@media (min-width:400px) and (max-width: 600px){
+    
+    html{
+        font-size: 47%;
+    }
+    .container{
+        display: grid;
+        grid-template-rows: 1fr  1fr;
+        grid-template-columns: 1fr;
+        margin: 5rem auto;
+        
+    }
+    .container-inner-bottom{
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    .container-img{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        height: 50vh;
+        background-image: linear-gradient( to right, hsla(277, 64%, 61%, 0.6), hsla(277, 64%, 61%, 0.6)), url(./images/image-header-mobile.jpg);
+    }
+
+    .container-inner{
+        padding: 1rem;
+        grid-row:2/3;
+        margin-top: 4rem;
+    }
+    }
+    @media (min-width:1px) and (max-width: 400px){
+    
+        html{
+            font-size: 47%;
+        }
+        .container{
+            display: grid;
+            grid-template-rows: 1fr  1fr;
+            grid-template-columns: 1fr;
+            margin: 5rem auto;
+            
+        }
+        .container-inner-bottom{
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+        }
+        .container-img{
+            grid-row: 1/2;
+            grid-column: 1/2;
+            height: 50vh;
+            background-image: linear-gradient( to right, hsla(277, 64%, 61%, 0.6), hsla(277, 64%, 61%, 0.6)), url(./images/image-header-mobile.jpg);
+            background-size: cover;
+            object-fit: cover;
+            background-position: right;
+        }
+    
+        .container-inner{
+            padding: 1rem;
+            grid-row:2/3;
+            margin-top: 4rem;
+        }
+        }
